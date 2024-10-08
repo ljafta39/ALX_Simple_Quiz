@@ -3,11 +3,12 @@ function checkAnswer() {
     
     const correctAnswer = "4";
 
-    const userAnswer = document.querySelector('input[name="quiz"]:checked');
+    const userAnswercheck = document.querySelector('input[name="quiz"]:checked');
 
-    
-    if (userAnswer) {
-        if (userAnswer.value === correctAnswer) {  // Exact match to what is expected
+    const userAnswer = userAnswercheck.value
+    if (userAnswercheck) {
+
+        if (userAnswer === correctAnswer) {  // Exact match to what is expected
             document.getElementById('feedback').textContent = "Correct! Well done.";
         } else {
            
